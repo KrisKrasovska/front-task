@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --primary-text-color: #0c1014;
   --secondary-text-color: #0848c0;
@@ -14,11 +21,13 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   overflow-x: hidden;
 }
@@ -78,7 +87,8 @@ ol {
   padding: 0;
 
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -86,9 +96,15 @@ ol {
 .btn {
   cursor: pointer;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 48px;
   margin: 20px auto;
   border-radius: 5px;
@@ -98,6 +114,10 @@ ol {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.125;
+
+  -webkit-transition: var(--transition);
+
+  -o-transition: var(--transition);
 
   transition: var(--transition);
 }
@@ -153,6 +173,7 @@ ol {
 .form-group--photo {
   width: 175px;
   height: 175px;
+  margin: 0 auto 32px;
 }
 .form-group__input-photo {
   width: 163px;
@@ -175,7 +196,9 @@ ol {
   position: absolute;
   top: 78px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .additional-text::before {
   content: "";
@@ -189,7 +212,9 @@ ol {
   position: absolute;
   top: -37px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 11;
 }
 .form__label-photo {
@@ -212,13 +237,20 @@ ol {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   position: absolute;
   top: 13px;
   right: 3px;
+  z-index: 20;
 }
 .remove-photo img {
   width: 16px;
@@ -232,7 +264,7 @@ ol {
   position: absolute;
   top: 19px;
   right: 16px;
-  z-index: 10;
+  z-index: 9;
 }
 .form-group--web-site::after {
   background-image: url("../images/site.svg");
@@ -276,6 +308,12 @@ ol {
   background-position: 0 0;
   background-size: 100% 100%;
 }
+.form-group--check::after {
+  background-image: url("../images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
 .form__label {
   position: absolute;
   top: 8px;
@@ -308,6 +346,12 @@ ol {
 .form .form__top .form-group:last-of-type {
   margin-bottom: 32px;
 }
+#organization-field {
+  appearance: none; /* Убираем стандартную стрелку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .form__btn {
   cursor: pointer;
   width: 100%;
@@ -316,15 +360,23 @@ ol {
   border: none;
   background-color: var(--btn-background);
   color: var(--bg-modal);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 3px;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.125;
   margin-bottom: 15px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
   transition: var(--transition);
 }
 .form__btn:hover,
@@ -358,9 +410,19 @@ ol {
     margin-bottom: 35px;
   }
   .form__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .form__top div .form-group {
     width: 364px;

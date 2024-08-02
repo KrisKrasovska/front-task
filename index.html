@@ -31,44 +31,6 @@
             <h2 class="title">Стать партнёром проекта</h2>
             <form class="form">
               <div class="form__top">
-                <div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      id="organization-name"
-                      class="form__input"
-                      required
-                      placeholder=" "
-                    />
-                    <label class="form__label" for="organization-name"
-                      ><span class="accent">✱</span>Название организации</label
-                    >
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="tel"
-                      id="organization-phone"
-                      class="form__input"
-                      required
-                      placeholder=" "
-                    />
-                    <label class="form__label" for="organization-phone"
-                      ><span class="accent">✱</span>Телефон</label
-                    >
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      id="organization-email"
-                      class="form__input"
-                      required
-                      placeholder=" "
-                    />
-                    <label class="form__label" for="organization-email"
-                      ><span class="accent">✱</span>E-mail</label
-                    >
-                  </div>
-                </div>
                 <div class="form-group form-group--photo">
                   <label class="form__label-photo" for="organization-photo"
                     ><span class="accent">✱</span>Логотип (jpeg, png)</label
@@ -78,6 +40,8 @@
                       type="file"
                       id="organization-photo"
                       class="form__photo"
+                      accept=".jpeg,.png"
+                      name="photo"
                       required
                     />
                     <span class="additional-text">Выберите файл</span>
@@ -91,9 +55,53 @@
                     </button>
                   </div>
                 </div>
+                <div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="organization-name"
+                      id="organization-name"
+                      class="form__input"
+                      required
+                    />
+                    <label class="form__label" for="organization-name"
+                      ><span class="accent">✱</span>Название организации</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      id="organization-phone"
+                      class="form__input"
+                      name="phone"
+                      required
+                    />
+                    <label class="form__label" for="organization-phone"
+                      ><span class="accent">✱</span>Телефон</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="organization-email"
+                      class="form__input"
+                      name="email"
+                      required
+                    />
+                    <label class="form__label" for="organization-email"
+                      ><span class="accent">✱</span>E-mail</label
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <select id="organization-field" class="form__input" required>
+              <div class="form-group form-group--check">
+                <select
+                  name="field"
+                  id="organization-field"
+                  class="form__input"
+                  required
+                >
+                  <option value="" disabled hidden>Направление</option>
                   <option value="Экология" selected>Экология</option>
                   <option value="Технология">Технология</option>
                   <option value="Финансы">Финансы</option>
@@ -108,6 +116,7 @@
                 <input
                   type="url"
                   id="organization-website"
+                  name="website"
                   class="form__input"
                   required
                   placeholder="Вебсайт организации"
@@ -117,7 +126,9 @@
                 <input
                   type="url"
                   id="organization-vk"
+                  name="vk"
                   class="form__input"
+                  required
                   placeholder="Ссылка на ВКонтакте"
                 />
               </div>
@@ -125,15 +136,19 @@
                 <input
                   type="url"
                   id="organization-ok"
+                  name="ok"
                   class="form__input"
+                  required
                   placeholder="Ссылка на Одноклассники"
                 />
               </div>
               <div class="form-group form-group--padding form-group--facebook">
                 <input
                   type="url"
+                  name="fb"
                   id="organization-fb"
                   class="form__input"
+                  required
                   placeholder="Ссылка на Facebook"
                 />
               </div>
@@ -141,23 +156,29 @@
                 <input
                   type="url"
                   id="organization-ig"
+                  name="instagram"
                   class="form__input"
+                  required
                   placeholder="Ссылка на Instagram"
                 />
               </div>
               <div class="form-group form-group--padding form-group--youtube">
                 <input
                   type="url"
+                  name="youtube"
                   id="organization-yt"
                   class="form__input"
+                  required
                   placeholder="Ссылка на YouTube"
                 />
               </div>
               <div class="form-group">
                 <input
                   type="text"
+                  name="leader"
                   id="leader-name"
                   class="form__input"
+                  required
                   placeholder="ФИО руководителя"
                 />
                 <label class="form__label" for="leader-name"
@@ -175,6 +196,7 @@
         </div>
       </div>
     </main>
-    <script defer src="./js/script.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script defer src="./js/sendForm.js"></script>
   </body>
 </html>
