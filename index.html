@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400&&family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Модальное Окно</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="visually-hidden">Модальное окно</h1>
+        <button id="open-modal" class="btn">Открыть модальное окно</button>
+        <div class="backdrop is-hidden" id="backdrop">
+          <div class="modal">
+            <h2 class="title">Стать партнёром проекта</h2>
+            <form class="form">
+              <div class="form__top">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="organization-name"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="organization-name"
+                    ><span class="accent">✱</span>Название организации</label
+                  >
+                </div>
+                <div class="form-group">
+                  <input
+                    type="tel"
+                    id="organization-phone"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="organization-phone"
+                    ><span class="accent">✱</span>Телефон</label
+                  >
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="organization-email"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="organization-email"
+                    ><span class="accent">✱</span>E-mail</label
+                  >
+                </div>
+                <div class="form-group">
+                  <input
+                    type="file"
+                    id="organization-photo"
+                    required
+                    placeholder=" "
+                  />
+                  <label for="organization-photo"
+                    ><span class="accent">✱</span>Логотип (jpeg, png)</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <select id="organization-field" required>
+                  <option value="" disabled selected hidden>
+                    <span class="accent">✱</span>Направление
+                  </option>
+                  <option value="Экология">Экология</option>
+                  <option value="Технология">Технология</option>
+                  <option value="Финансы">Финансы</option>
+                  <option value="Образование">Образование</option>
+                  <!-- Добавьте другие направления по мере необходимости -->
+                </select>
+                <label for="organization-field">Направление</label>
+              </div>
+              <div class="form-group form-group--web-site">
+                <input
+                  type="url"
+                  id="organization-website"
+                  required
+                  placeholder=" "
+                />
+                <label for="organization-website">Вебсайт организации</label>
+              </div>
+              <div class="form-group form-group--vk">
+                <input
+                  type="url"
+                  id="organization-vk"
+                  placeholder="Ссылка на ВКонтакте"
+                />
+              </div>
+              <div class="form-group form-group--ok">
+                <input
+                  type="url"
+                  id="organization-ok"
+                  placeholder="Ссылка на Одноклассники"
+                />
+              </div>
+              <div class="form-group form-group--facebook">
+                <input
+                  type="url"
+                  id="organization-fb"
+                  placeholder="Ссылка на Facebook"
+                />
+              </div>
+              <div class="form-group form-group--insta">
+                <input
+                  type="url"
+                  id="organization-ig"
+                  placeholder="Ссылка на Instagram"
+                />
+              </div>
+              <div class="form-group form-group--youtube">
+                <input
+                  type="url"
+                  id="organization-yt"
+                  placeholder="Ссылка на YouTube"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="leader-name"
+                  placeholder="ФИО руководителя"
+                />
+                <label for="leader-name">Имя руководителя</label>
+              </div>
+              <button type="submit">Стать партнёром проекта</button>
+            </form>
+            <button id="close-modal" class="btn-close" type="button">
+              Отменить
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
