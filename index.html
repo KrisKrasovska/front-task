@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400&&family=Montserrat:wght@800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&family=PT+Sans:wght@400;700&family=Montserrat:wght@800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,105 +31,125 @@
             <h2 class="title">Стать партнёром проекта</h2>
             <form class="form">
               <div class="form__top">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    id="organization-name"
-                    required
-                    placeholder=" "
-                  />
-                  <label for="organization-name"
-                    ><span class="accent">✱</span>Название организации</label
-                  >
+                <div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="organization-name"
+                      class="form__input"
+                      required
+                      placeholder=" "
+                    />
+                    <label class="form__label" for="organization-name"
+                      ><span class="accent">✱</span>Название организации</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      id="organization-phone"
+                      class="form__input"
+                      required
+                      placeholder=" "
+                    />
+                    <label class="form__label" for="organization-phone"
+                      ><span class="accent">✱</span>Телефон</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="organization-email"
+                      class="form__input"
+                      required
+                      placeholder=" "
+                    />
+                    <label class="form__label" for="organization-email"
+                      ><span class="accent">✱</span>E-mail</label
+                    >
+                  </div>
                 </div>
-                <div class="form-group">
-                  <input
-                    type="tel"
-                    id="organization-phone"
-                    required
-                    placeholder=" "
-                  />
-                  <label for="organization-phone"
-                    ><span class="accent">✱</span>Телефон</label
-                  >
-                </div>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    id="organization-email"
-                    required
-                    placeholder=" "
-                  />
-                  <label for="organization-email"
-                    ><span class="accent">✱</span>E-mail</label
-                  >
-                </div>
-                <div class="form-group">
-                  <input
-                    type="file"
-                    id="organization-photo"
-                    required
-                    placeholder=" "
-                  />
-                  <label for="organization-photo"
+                <div class="form-group form-group--photo">
+                  <label class="form__label-photo" for="organization-photo"
                     ><span class="accent">✱</span>Логотип (jpeg, png)</label
                   >
+                  <div class="form-group__input-photo">
+                    <input
+                      type="file"
+                      id="organization-photo"
+                      class="form__photo"
+                      required
+                    />
+                    <span class="additional-text">Выберите файл</span>
+
+                    <button
+                      id="remove-photo"
+                      class="remove-photo"
+                      aria-label="удалить фото"
+                    >
+                      <img src="./images/close.svg" alt="close" />
+                    </button>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
-                <select id="organization-field" required>
-                  <option value="" disabled selected hidden>
-                    <span class="accent">✱</span>Направление
-                  </option>
-                  <option value="Экология">Экология</option>
+                <select id="organization-field" class="form__input" required>
+                  <option value="Экология" selected>Экология</option>
                   <option value="Технология">Технология</option>
                   <option value="Финансы">Финансы</option>
                   <option value="Образование">Образование</option>
                   <!-- Добавьте другие направления по мере необходимости -->
                 </select>
-                <label for="organization-field">Направление</label>
+                <label class="form__label" for="organization-field"
+                  ><span class="accent">✱</span>Направление</label
+                >
               </div>
-              <div class="form-group form-group--web-site">
+              <div class="form-group form-group--padding form-group--web-site">
                 <input
                   type="url"
                   id="organization-website"
+                  class="form__input"
                   required
-                  placeholder=" "
+                  placeholder="Вебсайт организации"
                 />
-                <label for="organization-website">Вебсайт организации</label>
               </div>
-              <div class="form-group form-group--vk">
+              <div class="form-group form-group--padding form-group--vk">
                 <input
                   type="url"
                   id="organization-vk"
+                  class="form__input"
                   placeholder="Ссылка на ВКонтакте"
                 />
               </div>
-              <div class="form-group form-group--ok">
+              <div class="form-group form-group--padding form-group--ok">
                 <input
                   type="url"
                   id="organization-ok"
+                  class="form__input"
                   placeholder="Ссылка на Одноклассники"
                 />
               </div>
-              <div class="form-group form-group--facebook">
+              <div class="form-group form-group--padding form-group--facebook">
                 <input
                   type="url"
                   id="organization-fb"
+                  class="form__input"
                   placeholder="Ссылка на Facebook"
                 />
               </div>
-              <div class="form-group form-group--insta">
+              <div class="form-group form-group--padding form-group--insta">
                 <input
                   type="url"
                   id="organization-ig"
+                  class="form__input"
                   placeholder="Ссылка на Instagram"
                 />
               </div>
-              <div class="form-group form-group--youtube">
+              <div class="form-group form-group--padding form-group--youtube">
                 <input
                   type="url"
                   id="organization-yt"
+                  class="form__input"
                   placeholder="Ссылка на YouTube"
                 />
               </div>
@@ -137,11 +157,16 @@
                 <input
                   type="text"
                   id="leader-name"
+                  class="form__input"
                   placeholder="ФИО руководителя"
                 />
-                <label for="leader-name">Имя руководителя</label>
+                <label class="form__label" for="leader-name"
+                  >Руководитель</label
+                >
               </div>
-              <button type="submit">Стать партнёром проекта</button>
+              <button class="form__btn" type="submit">
+                Стать партнёром проекта
+              </button>
             </form>
             <button id="close-modal" class="btn-close" type="button">
               Отменить
