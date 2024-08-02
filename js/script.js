@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const tableHeader = document.querySelectorAll("#dataTable th");
   // создадим переменную data для записи данных, полученных при запросе
   let data = [];
-  console.log(data);
   // функция-запрос для задания 02
   const fetchData = async () => {
     try {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       )
       .join("");
   }
-
+  // события клика по заголовка страницы и сортировка списка для задания 03
   tableHeader.forEach((header) => {
     header.addEventListener("click", function () {
       const column = this.getAttribute("data-column");
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       renderTable(sortedData);
     });
   });
-  // функция поиска по введенному тексту
+  // функция поиска по введенному тексту для задания 03
   function searchByText() {
     // приводим введенный текст к нижнему регистру
     const searchText = this.value.toLowerCase();
