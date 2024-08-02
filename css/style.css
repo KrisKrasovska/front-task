@@ -2,12 +2,12 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   overflow-x: hidden;
 }
@@ -60,7 +60,43 @@ ol {
 
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.main {
+  padding: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+th {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+th:hover {
+  background-color: #ddd;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+}
+table.loading {
+	display: none;
+}
+thead tr{
+	width: 100%;
+}
+#searchInput {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
 }

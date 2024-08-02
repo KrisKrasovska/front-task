@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+<meta name="description" content="table rendering based on data request">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,20 @@
 </head>
 <body>
 	<main class="main">
-		<div class="table"></div>
+		<input type="text" id="searchInput" placeholder="Search...">
+<table id="dataTable" class="loading table">
+    <thead>
+        <tr>
+            <th data-column="id" data-order="asc">ID</th>
+            <th data-column="userId" data-order="asc">User ID</th>
+            <th data-column="title" data-order="asc">Title</th>
+            <th data-column="body" data-order="asc">Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Строки с данными -->
+    </tbody>
+</table>
 	</main>
 	<script defer src="./js/script.js"></script>
 </body>
